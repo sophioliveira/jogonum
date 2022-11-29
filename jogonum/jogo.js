@@ -5,6 +5,7 @@
     telainicio = addEventListener("click",iniciar,false);
 
     var telafinal = document.querySelector("telafinal");
+    telafinal = addEventListener("click",iniciar,false);
 
     function inicio(){
         for(var i = 1; i < 9; i++){
@@ -65,7 +66,24 @@ function movepeca(){
    
    render();
     if(chkWin()){
-        
+        gameOver();
+    }
+    function chkWin(){
+        for(var i in pecas){
+            var a = pecas[i];
+            var b = resposta[i];
+            if ( a !== b){
+                return false;
+            }
+        }
+        return true;
+
+    function gameOver(){
+        this.gameOver.getElementById('telafinal').style.position = "relative";
+        this.gameOver.getElementById('telafinal').style.zIndex = 1;
+        setTimeout(function (){
+            telafinal.addEventListener("click",iniciar,false); 
+        }, 500 )
     }
 }
 
@@ -104,14 +122,15 @@ function embaralhar(antigo){
 }
     function iniciar(){
         pecas = embaralhar(pecas);
-        this.removeEventListener("click",iniciar,false);
         document.getElementById('telainicio').style.position = "relative";
         document.getElementById('telainicio').style.zIndex = -1;
+        this.removeEventListener("click",iniciar,false);
         
 
         render();
     }
 
     inicio ();
+}
 }());
 
