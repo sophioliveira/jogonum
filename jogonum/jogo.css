@@ -1,51 +1,51 @@
-*{
-    margin: 0;
-    padding:0;
-    border:0 ;
-}
+    *{
+        margin: 0;
+        padding:0;
+        border:0 ;
+    }
 
-body {
-    background-color: #243038;
-}
-.tela{
-    width:305px; 
-    height: 305px;
-    border-radius:10px;
-    
-}
-.modal{
-    position: absolute;
-    transition: all 0.5s;
-}
-#telainicio{
-    background: url(img/inicio.png);
-    opacity: 1;
-    z-index: 1;
-}
-#telafinal{
-    background: url(img/final.png);
-    opacity: 0;
-    z-index: -1;
-}
-#container{
-    position: relative;
-    margin: 50px auto;
-    background-color: #7d807d;
-    border:outset #11205e;
-    
-}
-.peca{
-    width:90px;
-    height:90px;
-    position:absolute;
-    border-radius: 10px;
-    transition: left 0.5s, top 0.5s;
+    body {
+        background-color: #243038;
+    }
+    .tela{
+        width:305px; 
+        height: 305px;
+        border-radius:10px;
 
-}
-.peca:hover{
-    border:inset;
-    border-radius: 10px;
-}
+    }
+    .modal{
+        position: absolute;
+        transition: all 0.5s;
+    }
+    #telainicio{
+        background: url(img/inicio.png);
+        opacity: 1;
+        z-index: 1;
+    }
+    #telafinal{
+        background: url(img/final.png);
+        opacity: 0;
+        z-index: -1;
+    }
+    #container{
+        position: relative;
+        margin: 50px auto;
+        background-color: #7d807d;
+        border:outset #11205e;
+
+    }
+    .peca{
+        width:90px;
+        height:90px;
+        position:absolute;
+        border-radius: 10px;
+        transition: left 0.5s, top 0.5s;
+
+    }
+    .peca:hover{
+        border:inset;
+        border-radius: 10px;
+    }
 
 
 
